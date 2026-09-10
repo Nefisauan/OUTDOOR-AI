@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Outdoor AI",
+    "slug": "outdoor-ai",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}

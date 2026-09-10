@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+coverage/
+.expo/
+*.tsbuildinfo
+*.log
+.DS_Store
+backend/src/generated/
+apps/mobile/ios/
+apps/mobile/android/
+apps/mobile/.unused-template-assets/
