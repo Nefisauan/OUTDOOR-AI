@@ -1,0 +1,11 @@
+generator client {
+  provider = "prisma-client"
+  output = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Phase 1 has no domain models. Add versioned migrations with Phase 2.
