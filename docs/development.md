@@ -53,3 +53,7 @@ SDK 57 native iOS builds require Xcode 26.4 or newer; the inspected Mac has 26.3
 The root package overrides patched transitive dependencies: multer 2.3+, mysql2 3.24.4+, deepmerge-ts 8.0.2+, and UUID 11.1.1+ under xcode. These address npm advisories without downgrading Expo, NestJS, or Prisma. Deepmerge and UUID cross major versions, so Prisma configuration/generation and Expo bundle export are checked with the overrides. Review these overrides when upstream packages update.
 
 The devcontainer uses the documented mcr.microsoft.com/devcontainers/typescript-node:24-bookworm image and its default user. The image was successfully rebuilt in Codespaces.
+
+## Linting
+
+Run `npm run lint` from the repository root. ESLint recommended rules cover JavaScript and TypeScript sources, tests, and configuration. Generated code and build outputs are excluded. CI enforces zero warnings.

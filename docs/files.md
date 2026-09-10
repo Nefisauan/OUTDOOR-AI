@@ -54,3 +54,5 @@ shared/README.md
 tests/README.md
 tsconfig.base.json
 ```
+
+- `eslint.config.mjs`: JavaScript and TypeScript lint configuration.
