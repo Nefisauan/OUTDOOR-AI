@@ -57,3 +57,7 @@ The devcontainer uses the documented mcr.microsoft.com/devcontainers/typescript-
 ## Linting
 
 Run `npm run lint` from the repository root. ESLint recommended rules cover JavaScript and TypeScript sources, tests, and configuration. Generated code and build outputs are excluded. CI enforces zero warnings.
+
+## Phase 2
+
+Apply committed migrations with npm run db:deploy after starting PostgreSQL. See [Phase 2](phase-2.md) for account/profile endpoints, mobile API configuration, and testing. The Phase 1 no-domain-model statements above describe the earlier baseline.

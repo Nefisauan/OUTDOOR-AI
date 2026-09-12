@@ -1,5 +1,3 @@
-# Database migrations
+# Migrations
 
-No application tables are needed in Phase 1. The PostgreSQL connection is verified with SELECT 1 through Prisma. Do not add a placeholder business model.
-
-In Phase 2, create the first schema migration with `npm run db:migrate -- --name user_system` from the backend workspace, review the SQL, and commit the migration directory. Apply reviewed migrations with `npm run db:deploy` from the repository root. Never use `db push` against production.
+Phase 2 adds User, Session, and PlayerProfile through the committed migration. Run npm run db:deploy after PostgreSQL is ready. Do not mutate schemas with db push. See [migration workflow](../../../docs/phase-2.md).

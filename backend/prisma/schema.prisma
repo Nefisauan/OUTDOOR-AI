@@ -1,11 +1,68 @@
 generator client {
-  provider = "prisma-client"
-  output = "../src/generated/prisma"
-  moduleFormat = "cjs"
+ provider = "prisma-client"
+ output = "../src/generated/prisma"
+ moduleFormat = "cjs"
 }
-
 datasource db {
-  provider = "postgresql"
+ provider = "postgresql"
 }
-
-// Phase 1 has no domain models. Add versioned migrations with Phase 2.
+enum SkillLevel {
+ BEGINNER
+ INTERMEDIATE
+ ADVANCED
+ EXPERT
+}
+enum Handedness {
+ RIGHT
+ LEFT
+}
+enum BallFlight {
+ DRAW
+ FADE
+ STRAIGHT
+ MIXED
+ UNKNOWN
+}
+enum MissDirection {
+ LEFT
+ RIGHT
+ SHORT
+ LONG
+ VARIABLE
+ UNKNOWN
+}
+model User {
+ id String @id @default(uuid()) @db.Uuid
+ email String @unique @db.VarChar(254)
+ passwordHash String
+ createdAt DateTime @default(now())
+ profile PlayerProfile?
+ sessions Session[]
+}
+model Session {
+ id String @id @default(uuid()) @db.Uuid
+ tokenHash String @unique @db.Char(64)
+ userId String @db.Uuid
+ user User @relation(fields:[userId], references:[id], onDelete:Cascade)
+ expiresAt DateTime
+ createdAt DateTime @default(now())
+ @@index([userId])
+ @@index([expiresAt])
+}
+model PlayerProfile {
+ id String @id @default(uuid()) @db.Uuid
+ userId String @unique @db.Uuid
+ user User @relation(fields:[userId], references:[id], onDelete:Cascade)
+ dateOfBirth DateTime @db.Date
+ heightCm Float
+ weightKg Float
+ handicap Float
+ skillLevel SkillLevel
+ handedness Handedness
+ yearsPlaying Int
+ typicalScore Int
+ typicalBallFlight BallFlight
+ typicalMissDirection MissDirection
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}

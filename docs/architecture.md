@@ -22,3 +22,7 @@ The root TypeScript configuration carries shared strictness; each workspace sele
 The mobile screen intentionally makes no claim about backend availability. Mobile-to-API integration will be added when a phase needs it, with environment configuration and tests then.
 
 Reserved directories (documentation only): apps/web, ai, golf, glasses, shared. Hardware interfaces and mocks belong to Phase 9. Golf calculations belong to Phase 5; LLM explanations belong to Phase 7. Neither depends on a manufacturer SDK.
+
+## Phase 2 extension
+
+The shared validation package, auth/session module, and owner-only PlayerProfile module are described in [Phase 2 architecture](phase-2.md). Only User, Session, and PlayerProfile have been added.

@@ -1,0 +1,15 @@
+{
+  "name": "@outdoor-ai/shared",
+  "version": "0.2.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test test/*.test.cjs"
+  },
+  "dependencies": {
+    "zod": "^4.1.0"
+  }
+}

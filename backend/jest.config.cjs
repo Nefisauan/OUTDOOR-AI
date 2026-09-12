@@ -1,1 +1,1 @@
-module.exports = { preset: 'ts-jest', testEnvironment: 'node', testMatch: ['<rootDir>/test/environment.spec.ts', '<rootDir>/test/health.spec.ts'], clearMocks: true };
+module.exports = { preset: 'ts-jest', testEnvironment: 'node', testMatch: ['<rootDir>/test/**/*.spec.ts'], testPathIgnorePatterns: ['.integration.spec.ts$'], clearMocks: true };

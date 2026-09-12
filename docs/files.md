@@ -1,58 +1,80 @@
-# Phase 1 file inventory
+# Repository file inventory
 
-Complete source and configuration files in this phase. Generated client, bundles, dependencies, and secret environment files are excluded.
+Phase 2 source and configuration files. Generated outputs and local environment files are excluded.
 
-```text
-.devcontainer/devcontainer.json
-.env.example
-.github/workflows/ci.yml
-.gitignore
-.nvmrc
-README.md
-ai/README.md
-apps/mobile/.gitignore
-apps/mobile/AGENTS.md
-apps/mobile/App.test.tsx
-apps/mobile/App.tsx
-apps/mobile/LICENSE
-apps/mobile/app.json
-apps/mobile/index.ts
-apps/mobile/jest.config.cjs
-apps/mobile/package.json
-apps/mobile/tsconfig.json
-apps/web/README.md
-backend/.env.example
-backend/jest.config.cjs
-backend/jest.integration.config.cjs
-backend/package.json
-backend/prisma.config.ts
-backend/prisma/migrations/README.md
-backend/prisma/schema.prisma
-backend/src/app.module.ts
-backend/src/config/environment.module.ts
-backend/src/config/environment.ts
-backend/src/health/health.controller.ts
-backend/src/main.ts
-backend/src/prisma/prisma.module.ts
-backend/src/prisma/prisma.service.ts
-backend/test/database.integration.spec.ts
-backend/test/environment.spec.ts
-backend/test/health.spec.ts
-backend/tsconfig.build.json
-backend/tsconfig.json
-docs/architecture.md
-docs/development.md
-docs/files.md
-docs/phase-1.md
-glasses/README.md
-golf/README.md
-infrastructure/compose.yaml
-infrastructure/init-env.mjs
-package-lock.json
-package.json
-shared/README.md
-tests/README.md
-tsconfig.base.json
-```
-
-- `eslint.config.mjs`: JavaScript and TypeScript lint configuration.
+- .devcontainer/devcontainer.json
+- .env.example
+- .github/workflows/ci.yml
+- .gitignore
+- .nvmrc
+- README.md
+- ai/README.md
+- apps/mobile/.env.example
+- apps/mobile/.gitignore
+- apps/mobile/AGENTS.md
+- apps/mobile/App.test.tsx
+- apps/mobile/App.tsx
+- apps/mobile/LICENSE
+- apps/mobile/app.json
+- apps/mobile/index.ts
+- apps/mobile/jest.config.cjs
+- apps/mobile/package.json
+- apps/mobile/src/AccountScreen.tsx
+- apps/mobile/src/ProfileForm.test.tsx
+- apps/mobile/src/ProfileForm.tsx
+- apps/mobile/src/api.ts
+- apps/mobile/src/components.tsx
+- apps/mobile/src/flow.test.tsx
+- apps/mobile/tsconfig.json
+- apps/web/README.md
+- backend/.env.example
+- backend/jest.config.cjs
+- backend/jest.integration.config.cjs
+- backend/package.json
+- backend/prisma.config.ts
+- backend/prisma/migrations/20260911012920_phase_2_accounts_profiles/migration.sql
+- backend/prisma/migrations/README.md
+- backend/prisma/migrations/migration_lock.toml
+- backend/prisma/schema.prisma
+- backend/src/app.module.ts
+- backend/src/auth/auth.controller.ts
+- backend/src/auth/auth.guard.ts
+- backend/src/auth/auth.module.ts
+- backend/src/auth/auth.service.ts
+- backend/src/auth/password.ts
+- backend/src/config/environment.module.ts
+- backend/src/config/environment.ts
+- backend/src/health/health.controller.ts
+- backend/src/main.ts
+- backend/src/prisma/prisma.module.ts
+- backend/src/prisma/prisma.service.ts
+- backend/src/profiles/profile.controller.ts
+- backend/src/profiles/profile.module.ts
+- backend/src/profiles/profile.service.ts
+- backend/src/validation/parse.ts
+- backend/test/auth.spec.ts
+- backend/test/database.integration.spec.ts
+- backend/test/environment.spec.ts
+- backend/test/health.spec.ts
+- backend/test/profile.integration.spec.ts
+- backend/tsconfig.build.json
+- backend/tsconfig.json
+- docs/architecture.md
+- docs/development.md
+- docs/files.md
+- docs/phase-1.md
+- docs/phase-2.md
+- eslint.config.mjs
+- glasses/README.md
+- golf/README.md
+- infrastructure/compose.yaml
+- infrastructure/init-env.mjs
+- package-lock.json
+- package.json
+- shared/README.md
+- shared/package.json
+- shared/src/index.ts
+- shared/test/profile.test.cjs
+- shared/tsconfig.json
+- tests/README.md
+- tsconfig.base.json

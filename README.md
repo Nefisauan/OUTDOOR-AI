@@ -2,25 +2,25 @@
 
 **Look. Ask. Play.**
 
-Phase 1 foundation for a hardware-independent outdoor assistant, initially focused on golf.
+Phase 2 accounts and player profiles for a hardware-independent outdoor assistant, initially focused on golf.
 
 ## Current scope
 
 - React Native + Expo mobile starter (iOS first; Android-compatible).
 - NestJS REST backend with liveness and PostgreSQL readiness endpoints.
-- Prisma ORM and PostgreSQL development database. No domain tables yet.
+- Prisma ORM and PostgreSQL development database. User, Session, and PlayerProfile models.
 - Strict TypeScript, npm workspaces, unit/API/integration tests, and GitHub Actions.
 
-No authentication, AI, golf calculations, course data, or glasses integration is implemented.
+Email/password accounts and owner-only golfer profiles are implemented. AI, golf calculations, course data, and glasses integration remain out of scope.
 
 ## Develop remotely
 
 Use Node 24 LTS, npm, Git, and Docker with Compose v2. GitHub Codespaces supplies these prerequisites through the included devcontainer. For local development, install them first. Native iOS builds additionally require macOS and compatible Xcode (see the development guide).
 
-Phase 1 is on `feature/phase-1-foundation` pending review and merge. Clone it explicitly:
+Phase 2 is on `feature/phase-2-player-profile` pending review and merge. Clone it explicitly:
 
 ```bash
-git clone --branch feature/phase-1-foundation https://github.com/Nefisauan/OUTDOOR-AI.git
+git clone --branch feature/phase-2-player-profile https://github.com/Nefisauan/OUTDOOR-AI.git
 cd OUTDOOR-AI
 ```
 
@@ -34,6 +34,7 @@ npm run env:init
 npm run prisma:validate
 npm run prisma:generate
 docker compose --env-file .env -f infrastructure/compose.yaml up -d --wait
+npm run db:deploy
 npm run lint
 npm run typecheck
 npm test
@@ -55,9 +56,11 @@ Run the mobile bundler with `npm run dev:mobile`. See [development instructions]
 
 ## Documentation
 
+- [Phase 2 accounts, profiles, API, and mobile setup](docs/phase-2.md)
+
 - [Architecture and boundaries](docs/architecture.md)
 - [Development, environment, testing, and Git workflow](docs/development.md)
 - [Phase 1 scope and verification](docs/phase-1.md)
 - [Exact file inventory](docs/files.md)
 
-Review Phase 1 before approving Phase 2. Do not merge unreviewed work into main.
+Review Phase 2 before approving Phase 3. Do not merge unreviewed work into main.
